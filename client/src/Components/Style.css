@@ -85,7 +85,7 @@ header i {
 /* ####################    Movie Card   ############################# */
 
 #movieCard {
-  min-width: 230px;
+  width: 230px;
 }
 #movieCard img {
   width: 100%;

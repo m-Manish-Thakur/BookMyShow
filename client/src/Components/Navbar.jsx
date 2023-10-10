@@ -3,7 +3,7 @@ import "./Style.css";
 import axios from "axios";
 import Category from "./Category";
 import UserContext from "../Contexts/UserContext";
-
+import { Link } from "react-router-dom";
 const Navbar = () => {
   const { city, setCity } = useContext(UserContext);
   const [cities, setcities] = useState([]);
@@ -19,12 +19,10 @@ const Navbar = () => {
       });
   }, []);
 
-  const handleCity = (cityName) =>{
+  const handleCity = (cityName) => {
     localStorage.setItem("city", cityName);
     setCity(cityName);
-  }
-  
-
+  };
 
   return (
     <>
@@ -38,9 +36,9 @@ const Navbar = () => {
           />
         </div>
         <div className="d-flex align-items-center">
-          <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">
-            {city} <i class="fa-solid fa-caret-down"></i>
-          </a>
+            <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">
+              {city} <i class="fa-solid fa-caret-down"></i>
+            </a>
           <button>Sign in</button>
           <i class="fa-solid fa-bars"></i>
         </div>
