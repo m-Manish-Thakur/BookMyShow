@@ -1,0 +1,180 @@
+header {
+  padding: 15px 7vw;
+  background-color: rgb(51, 53, 68);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header img {
+  height: 35px;
+}
+header #search {
+  padding: 5px 15px;
+  width: 500px;
+  margin-left: 25px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  font-size: 15px;
+  font-family: "varela round";
+}
+header a {
+  color: aliceblue;
+  text-decoration: none;
+}
+header a i {
+  margin-left: 5px;
+  font-size: 14px;
+}
+header button {
+  padding: 4px 13px;
+  margin-left: 25px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  font-size: 14px;
+  font-family: "varela round";
+  background-color: rgb(244, 60, 28);
+  color: white;
+  letter-spacing: 0.3px;
+}
+header i {
+  margin-left: 20px;
+  font-size: 18px;
+  color: aliceblue;
+}
+
+/* ####################    Category   ############################# */
+
+#category {
+  padding: 8px 7vw;
+  background-color: #222539;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#category a {
+  margin-right: 25px;
+  color: rgb(206, 206, 206);
+  text-decoration: none;
+  font-size: 15px;
+  font-family: "varela round";
+}
+#category a img {
+  height: 16px;
+}
+
+/* ########################   MODEL  ############################ */
+#model {
+  display: flex;
+  padding: 10px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+#model #city{
+  margin: 10px;
+  text-align: center;
+}
+#model h4{
+  font-size: 15px;
+  font-family: 'poppins';
+  color: rgb(51, 53, 68);
+  letter-spacing: 0.3px;
+}
+
+/* ####################    Movie Card   ############################# */
+
+#movieCard {
+  min-width: 230px;
+}
+#movieCard img {
+  width: 100%;
+  border-radius: 10px;
+}
+#movieCard h3 {
+  font-size: 19px;
+  font-family: "poppins";
+  font-weight: 600;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+#movieCard h4 {
+  font-size: 16px;
+  font-family: "rubik";
+  font-weight: 500;
+  color: rgb(59, 60, 72);
+}
+
+
+
+/* #####################    FOOTER    ########################### */
+
+#footer{
+  width: 100vw;
+  padding: 50px 3vw;
+  background-color: rgb(28, 46, 76);
+}
+#footerContainer{
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  background-color: rgb(28, 46, 76);
+  row-gap: 50px;
+  margin-top: 50px;
+}
+#footer .item{
+  width: 200px;
+  display: flex;
+  flex-direction: column;   
+}
+#footer .item h2{
+  font-size: 23px;
+  font-family: 'poppins';
+  color: rgb(172, 200, 224);
+}
+#footer .item a{
+  margin-top: 15px;
+  color: rgb(115, 139, 161);
+  text-decoration: none;
+  letter-spacing: 0.3px;
+}   
+
+#footer .item h3{
+  font-size: 23px;
+  font-family: 'poppins';
+  color: rgb(215, 232, 247);
+  font-weight: 700;
+}
+#footer .item i{
+  color: rgb(215, 232, 247);
+  border: 1px solid rgb(215, 232, 247);
+  border-radius: 50%;
+  font-size: 17px;
+  padding-top: 11px;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  margin: 20px 5px;
+  cursor: pointer;
+}
+#footer .item i:hover{
+  background-color: rgb(215, 232, 247);
+  color: rgb(28, 46, 76);
+}
+#footer .item p{
+  margin-top: 15px;
+  color: rgb(115, 139, 161);
+  text-decoration: none;
+  letter-spacing: 0.5px;
+}   
+
+
+@media screen and (max-width: 500px){
+  #footerContainer{
+      justify-content: flex-start;
+      margin-top: 50px;
+  }
+}
+

@@ -1,0 +1,27 @@
+#home{
+    width: 100vw;
+    padding: 0 7vw;
+}
+#home #homePoster{
+    width: 100%;
+    margin: 50px auto;
+    border-radius: 10px;
+}
+#home h1{
+    font-family: 'poppins';
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+#movieList{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    column-gap: 30px;
+    width: 100%;
+    overflow-x: scroll;
+}
+#movieList::-webkit-scrollbar{
+    height: 5px;
+    color: brown;
+}
