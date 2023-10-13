@@ -1,26 +1,155 @@
-#home{
-    width: 100vw;
-    padding: 0 7vw;
+#home {
+  width: 100vw;
+  padding: 0 7vw;
 }
-#home #homePoster{
-    width: 100%;
-    margin: 50px auto;
-    border-radius: 10px;
+#home #homePoster {
+  width: 100%;
+  margin: 50px auto;
+  border-radius: 10px;
 }
-#home h1{
-    font-family: 'poppins';
-    font-size: 25px;
-    font-weight: 600;
-    margin-bottom: 20px;
+#home h1 {
+  font-family: "poppins";
+  font-size: 25px;
+  font-weight: 600;
+  margin-bottom: 20px;
 }
-#movieList{
+#movieList {
+  display: flex;
+  align-items: flex-start;
+  column-gap: 30px;
+  width: 100%;
+  overflow-x: scroll;
+}
+#movieList::-webkit-scrollbar {
+  height: 5px;
+  color: brown;
+}
+
+/* #############################  Movie Details  ######################### */
+
+#movieDetails {
+  width: 100vw;
+}
+#moviePoster {
+  padding: 50px 7vw;
+  background: rgba(26, 36, 39, 0.984);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  column-gap: 50px;
+}
+#moviePoster img {
+  width: 250px;
+  border-radius: 15px;
+}
+#moviePoster .content {
+  color: aliceblue;
+}
+#moviePoster .content h2 {
+  font-family: "poppins", sans-serif;
+  font-weight: 600;
+}
+#moviePoster .content span {
+   line-height: 60px;
+   font-size: 23px;
+   font-family: 'poppins', sans-serif;
+   font-weight: 600;
+   letter-spacing: 1px;
+}
+#moviePoster .content span i{
+   color: #F07584;
+}
+#moviePoster .content #review {
     display: flex;
-    align-items: flex-start;
-    column-gap: 30px;
-    width: 100%;
-    overflow-x: scroll;
+    align-items: center;
+    column-gap: 50px;
+    padding: 15px 25px;
+    border-radius: 10px;
+    background-color: rgb(59, 57, 57);
 }
-#movieList::-webkit-scrollbar{
-    height: 5px;
-    color: brown;
+#moviePoster .content #review h5{
+    font-family: 'poppins', sans-serif;
+    font-weight: 600;
+    font-size: 17px;
+    margin-bottom: 5px;
+ }
+ #moviePoster .content #review p{
+    font-family: 'poppins', sans-serif;
+    color: gainsboro;
+    margin-bottom: 0;
+ }
+ #moviePoster .content #review button{
+    font-family: 'poppins', sans-serif;
+    padding: 8px 16px;
+    border-radius: 10px;
+    border: none;
+    font-weight: 600;
+    color: rgb(61, 58, 58);
+ }
+ #moviePoster .content #duration_date{
+    font-size: 16px;
+    margin-top: 20px;
+}
+#moviePoster .content #bookTickets{
+    padding: 12px 50px;
+    background-color: #F84464;
+    color: aliceblue;
+    border: none;
+    border-radius: 10px;
+    font-weight: 600;
+    font-family: 'poppins';
+    letter-spacing: 0.5px;
+}
+ 
+
+
+#movieDetails #aboutMovie{
+    padding: 25px 7vw;
+}
+#movieDetails #aboutMovie h5{
+    font-weight: 700;
+    font-size: 22px;
+    font-family: 'Roboto';
+    letter-spacing: 0.3px;
+}
+#movieDetails #aboutMovie p{
+    color: rgb(59, 57, 57);
+    margin-top: 15px;
+}
+
+
+#movieDetails #casts{
+    display: flex;
+}
+#movieDetails #casts .item{
+    width: 200px;
+    text-align: center;
+    padding-top: 20px;
+}
+#movieDetails #casts .item img{
+    width: 150px;
+    border-radius: 50%;
+}
+#movieDetails #casts .item h6{  
+    font-weight: 600;
+    font-family: 'poppins';
+    margin-bottom: 0;
+    margin-top: 10px;
+}
+#movieDetails #casts .item .as{  
+    color: rgb(59, 57, 57);
+    margin-top: 5px;
+}
+
+
+/* #########################    Book Tickets   ############################ */
+
+#bookTickets .movieName{
+  background-color: #333545;
+  padding: 40px 7vw;
+  color: white;
+  font-family: 'poppins';
+  font-weight: 500;
+  font-size: 33px;
+  cursor: pointer;
 }

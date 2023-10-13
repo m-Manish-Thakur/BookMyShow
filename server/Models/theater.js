@@ -6,6 +6,6 @@ const theaterSchema = mongoose.Schema({
   city: String
 });
 
-const Theater = mongoose.model("thater", theaterSchema);
+const Theater = mongoose.model("theater", theaterSchema);
 
 module.exports = Theater;

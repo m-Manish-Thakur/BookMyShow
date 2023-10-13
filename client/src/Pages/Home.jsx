@@ -30,6 +30,7 @@ const Home = () => {
         <img
           src="https://assets-in.bmscdn.com/discovery-catalog/collections/tr:w-1440,h-120:q-80/slug-navratri-collection-202309251241.jpg"
           id="homePoster"
+          alt=""
         />
         <h1>Reccomended Movies</h1>
         <div id="movieList">
@@ -44,6 +45,7 @@ const Home = () => {
         <img
           src="https://assets-in.bmscdn.com/discovery-catalog/collections/tr:w-1440,h-120:q-80/stream-leadin-web-collection-202210241242.png"
           id="homePoster"
+          alt=""
         />
       </div>
     </>

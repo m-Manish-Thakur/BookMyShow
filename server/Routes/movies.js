@@ -23,7 +23,9 @@ router.post("/", async (req, res) => {
 
   res.json(movie);
 });
- 
+
+
+
 // Get movies available in a specific city
 router.get("/:city", async (req, res) => {
   const city = req.params.city;
@@ -31,26 +33,34 @@ router.get("/:city", async (req, res) => {
   try {
     const theatersInCity = await Theater.find({ city: city });
     const theaterIds = theatersInCity.map((theater) => theater._id);
-    const moviesInCity = await ShowTime.find({ theater: { $in: theaterIds } })
-    .populate('movie'); 
+    const moviesInCity = await ShowTime.find({
+      theater: { $in: theaterIds },
+    }).populate("movie");
 
     console.log(moviesInCity);
-    res.json(moviesInCity)
-
+    res.json(moviesInCity);
   } catch (err) {
     console.log(err);
     res.status(500).json({ error: "Error fetching movies" });
   }
 });
 
-// Get all movies
-router.get("/", async (req, res) => {
+
+// Get Movie By ID
+router.get("/movie/:movieId", async (req, res) => {
+  const movieId = req.params.movieId;
   try {
-    const movies = await Movies.find({});
-    res.json(movies);
+    const movie = await Movies.find({_id: movieId});
+    if (!movie) {
+      return res.status(404).json({ error: "Movie not found" });
+    }
+    console.log(movie);
+    res.json(movie);
   } catch (err) {
-    res.json({ Msg: "Data not Found" });
+    console.error(err);
+    res.status(500).json({ error: "Error fetching movie details" });
   }
 });
+
 
 module.exports = router;

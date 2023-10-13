@@ -4,6 +4,7 @@ import axios from "axios";
 import Category from "./Category";
 import UserContext from "../Contexts/UserContext";
 import { Link } from "react-router-dom";
+
 const Navbar = () => {
   const { city, setCity } = useContext(UserContext);
   const [cities, setcities] = useState([]);
