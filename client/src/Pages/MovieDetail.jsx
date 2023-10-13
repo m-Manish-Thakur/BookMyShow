@@ -13,7 +13,6 @@ const MovieDetail = () => {
     axios
       .get(`http://localhost:8000/movies/movie/${movieId}`)
       .then((response) => {
-        console.log(response.data);
         setMovie(response.data);
       })
       .catch((error) => {

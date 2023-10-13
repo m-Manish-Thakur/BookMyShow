@@ -24,8 +24,6 @@ router.post("/", async (req, res) => {
   res.json(movie);
 });
 
-
-
 // Get movies available in a specific city
 router.get("/:city", async (req, res) => {
   const city = req.params.city;
@@ -33,9 +31,14 @@ router.get("/:city", async (req, res) => {
   try {
     const theatersInCity = await Theater.find({ city: city });
     const theaterIds = theatersInCity.map((theater) => theater._id);
-    const moviesInCity = await ShowTime.find({
+
+    // Use distinct() to get unique movies based on theater IDs
+    const movieIds = await ShowTime.distinct("movie", {
       theater: { $in: theaterIds },
-    }).populate("movie");
+    });
+
+    // Fetch movie details using the distinct movie IDs
+    const moviesInCity = await Movies.find({ _id: { $in: movieIds } });
 
     console.log(moviesInCity);
     res.json(moviesInCity);
@@ -45,12 +48,11 @@ router.get("/:city", async (req, res) => {
   }
 });
 
-
 // Get Movie By ID
 router.get("/movie/:movieId", async (req, res) => {
   const movieId = req.params.movieId;
   try {
-    const movie = await Movies.find({_id: movieId});
+    const movie = await Movies.find({ _id: movieId });
     if (!movie) {
       return res.status(404).json({ error: "Movie not found" });
     }
@@ -61,6 +63,5 @@ router.get("/movie/:movieId", async (req, res) => {
     res.status(500).json({ error: "Error fetching movie details" });
   }
 });
-
 
 module.exports = router;

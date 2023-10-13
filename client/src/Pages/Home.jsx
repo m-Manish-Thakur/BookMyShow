@@ -36,7 +36,7 @@ const Home = () => {
         <div id="movieList">
           {Movies.length > 0 ? (
             Movies.map((movie) => (
-              <MovieCard movie={movie.movie} key={movie.movie._id} />
+              <MovieCard movie={movie} key={movie._id} />
             ))
           ) : (
             <h2>Movies are not available in your city at this time.</h2>
